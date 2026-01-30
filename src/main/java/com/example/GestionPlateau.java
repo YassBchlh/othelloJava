@@ -157,4 +157,22 @@ public class GestionPlateau {
         }
     }
 
+    /**
+     * Compte le nombre de jetons d'une couleur donnée
+     * 
+     * @param couleur "W" ou "B"
+     * @return le nombre de jetons de cette couleur
+     */
+    public int compterJetons(String couleur) {
+        int compteur = 0;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (plateau[i][j] != null && plateau[i][j].equals(couleur)) {
+                    compteur++;
+                }
+            }
+        }
+        return compteur;
+    }
+
 }
